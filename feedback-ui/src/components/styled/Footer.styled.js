@@ -5,6 +5,7 @@ export const Footer = styled.div`
   position: relative;
   height: 200px;
   overflow: hidden;
+  border-top: 1px solid #d8d8d8;
 
   div.decor-top {
     background-image: url("/images/cartoon4.svg");
@@ -34,5 +35,13 @@ export const Footer = styled.div`
     height: 90px;
     bottom: 40px;
     right: -30px;
+  }
+
+  @media (max-width: 1260px) {
+    .decor-top,
+    .decor-left,
+    .decor-right {
+      display: none;
+    }
   }
 `;
