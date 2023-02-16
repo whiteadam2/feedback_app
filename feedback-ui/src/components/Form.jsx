@@ -1,8 +1,13 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { StyledForm } from "./styled/Form.styled";
+import { sendFeedback } from "../redux/feedbackSlice";
+import { StatusBar } from "./StatusBar";
 
 export function Form() {
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -11,8 +16,7 @@ export function Form() {
   } = useForm();
 
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
-    //dispatch(sendFeedback(data))
+    dispatch(sendFeedback(data));
     reset();
   };
 
@@ -51,7 +55,9 @@ export function Form() {
         {errors?.feedback && (
           <p style={{ color: "red" }}>{errors.feedback.message}</p>
         )}
+
         <button type="submit">Send message</button>
+        <StatusBar />
       </form>
     </StyledForm>
   );

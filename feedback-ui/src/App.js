@@ -1,4 +1,3 @@
-import "./App.css";
 import { Container } from "./components/styled/Container.styled";
 import GlobalStyles from "./components/styled/Global";
 import { Wrapper } from "./components/styled/Wrapper.styled";
