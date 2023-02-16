@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
-export const Form = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+export const StyledForm = styled.div`
   width: 400px;
   max-width: 80%;
   margin: 150px 0 0 200px;
@@ -12,6 +9,12 @@ export const Form = styled.div`
     font-size: 26px;
     font-weight: lighter;
     margin-bottom: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   button {
