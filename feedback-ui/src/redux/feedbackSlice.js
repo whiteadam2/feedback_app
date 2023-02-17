@@ -8,7 +8,8 @@ const initialState = {
 };
 
 export const sendFeedback = createAsyncThunk("sendFeedback", async (data) => {
-  const response = await fetch("http://localhost:8080", {
+  const response = await fetch("http://localhost:3000/feedbacks", {
+    headers: { "Content-Type": "application/json" },
     method: "POST",
     body: JSON.stringify(data),
   });
