@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import config from "../config/config.json";
 
 const initialState = {
   error: "",
@@ -8,7 +9,7 @@ const initialState = {
 };
 
 export const sendFeedback = createAsyncThunk("sendFeedback", async (data) => {
-  const response = await fetch("http://localhost:3000/feedbacks", {
+  const response = await fetch(config.backendURL, {
     headers: { "Content-Type": "application/json" },
     method: "POST",
     body: JSON.stringify(data),
