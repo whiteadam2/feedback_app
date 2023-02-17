@@ -1,0 +1,15 @@
+[Unit]
+Description="Feedback"
+
+[Service]
+ExecStart=/usr/bin/node nest start
+WorkingDirectory=/app/feedback-server
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=feedback
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

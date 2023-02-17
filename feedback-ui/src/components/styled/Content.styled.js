@@ -8,7 +8,7 @@ export const Content = styled.div`
   overflow: hidden;
 
   div.earth {
-    background-image: url("/images/Earth2.png");
+    background-image: url("/images/Earth2.webp");
     background-size: cover;
     border-radius: 50%;
     position: absolute;
