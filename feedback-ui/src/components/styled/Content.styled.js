@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   min-height: 800px;
-  background: #ffffff url("/images/Cloud.png");
+  background: #ffffff url("/images/Cloud.svg");
   background-size: cover;
   position: relative;
   overflow: hidden;
 
   div.earth {
-    background-image: url("/images/Earth2.webp");
+    background-image: url("/images/Earth.webp");
     background-size: cover;
     border-radius: 50%;
     position: absolute;
