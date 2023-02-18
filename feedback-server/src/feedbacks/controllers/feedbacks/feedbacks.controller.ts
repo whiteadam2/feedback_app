@@ -20,7 +20,7 @@ export class FeedbacksController {
 
   @Post('')
   @UsePipes(ValidationPipe)
-  createUsers(@Body() createUserDto: CreateFeedbackDto) {
-    return this.feedbackService.createFeedback(createUserDto);
+  createFeedbacks(@Body() createFeedbackDto: CreateFeedbackDto) {
+    return this.feedbackService.createFeedback(createFeedbackDto);
   }
 }
